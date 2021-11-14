@@ -1,0 +1,42 @@
+$breakpoints: (
+    mobile-mini: 450px,
+    mobile: 599px,
+    tablette-mini: 768px,
+    tablette-moyenne: 992px,
+    tablette-grande: 1200px,
+    petit-ecran: 1400px,
+    ecran: 1600px,
+);
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$head-font: "Shrikhand", sans-serif;
+$body-font: "Roboto", sans-serif;
+
+/*@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+.fcnt {
+    border: 2px solid red;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only() {
+        grid-template-columns: 1fr;
+    }
+}*/
+
+.baspage {
+    color: $color-secondary;
+    background-color: $color-primary;
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        a {
+            text-decoration: none;
+        }
+    }
+}
