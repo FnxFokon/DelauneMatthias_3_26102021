@@ -14,6 +14,7 @@ $color-tertiary: #99e2d0;
 $head-font: "Shrikhand", sans-serif;
 $body-font: "Roboto", sans-serif;
 
+
 /*
 Exemple
 
@@ -29,7 +30,10 @@ Exemple
         grid-template-columns: 1fr;
     }
 }*/
-
+.lien {
+    text-decoration: none;
+    color: $color-tertiary;
+}
 .baspage {
     background-color: grey;
     div {
@@ -37,8 +41,9 @@ Exemple
         justify-content: space-between;
         align-items: center;
         margin-top: 10px;
-        a {
+        .lien {
             text-decoration: none;
+            color: $color-tertiary;
         }
     }
 }

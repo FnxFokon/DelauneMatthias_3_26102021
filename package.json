@@ -4,18 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:.public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./assets/sass/main.scss:assets/css/style.css",
+    "prefix": "postcss ./assets/css/style.css --use autoprefixer -d .assets/css/prefixed/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FnxFokon/Projet-3---OhMyFood.git"
+    "url": "https://github.com/FnxFokon/P3-ohmyfood.git"
   },
   "author": "\"\"",
   "license": "ISC",
   "browserslist":"last 4 versions",
   "bugs": {
-    "url": "https://github.com/FnxFokon/Projet-3---OhMyFood/issues"
+    "url": "https://github.com/FnxFokon/P3-ohmyfood/issues"
   },
-  "homepage": "https://github.com/FnxFokon/Projet-3---OhMyFood#readme"
+  "homepage": "https://github.com/FnxFokon/P3-ohmyfood.git#readme"
 }

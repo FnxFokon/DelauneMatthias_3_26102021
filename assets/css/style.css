@@ -1,0 +1,35 @@
+/*
+Exemple
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+.fcnt {
+    border: 2px solid red;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only() {
+        grid-template-columns: 1fr;
+    }
+}*/
+.lien {
+  text-decoration: none;
+  color: #99e2d0;
+}
+
+.baspage {
+  background-color: grey;
+}
+.baspage div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.baspage div .lien {
+  text-decoration: none;
+  color: #99e2d0;
+}
+
+/*# sourceMappingURL=style.css.map */
