@@ -1,4 +1,12 @@
 /*
+Ordre d'importation: 
+    outils (variable/fonction/mixin/placeholder)
+    base
+    composant
+    layout
+    page
+    theme
+
 Exemple
 
 @mixin mobile-only {
