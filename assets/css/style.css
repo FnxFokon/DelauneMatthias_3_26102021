@@ -13,6 +13,10 @@ Exemple
         grid-template-columns: 1fr;
     }
 }*/
+ul {
+  list-style: none;
+}
+
 .lien {
   text-decoration: none;
   color: #99e2d0;

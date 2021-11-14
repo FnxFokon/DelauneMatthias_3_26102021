@@ -16,6 +16,14 @@ $body-font: "Roboto", sans-serif;
 
 
 /*
+Ordre d'importation: 
+    outils (variable/fonction/mixin/placeholder)
+    base
+    composant
+    layout
+    page
+    theme
+
 Exemple
 
 @mixin mobile-only {
@@ -30,6 +38,9 @@ Exemple
         grid-template-columns: 1fr;
     }
 }*/
+ul {
+    list-style: none;
+}
 .lien {
     text-decoration: none;
     color: $color-tertiary;
