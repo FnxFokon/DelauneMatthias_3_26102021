@@ -14,7 +14,9 @@ $color-tertiary: #99e2d0;
 $head-font: "Shrikhand", sans-serif;
 $body-font: "Roboto", sans-serif;
 
-
+body {
+    margin: 0;
+}
 /*
 Ordre d'importation: 
     outils (variable/fonction/mixin/placeholder)
@@ -43,18 +45,67 @@ ul {
 }
 .lien {
     text-decoration: none;
-    color: $color-tertiary;
+    color: black;
 }
+/* HEADER */
+header {
+    width: 100%;
+    img {
+        align-items: center;
+    }
+}
+
+
+/* Top page */
+.loca{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.reservation {
+    width: 100%;
+    h1 {
+
+    }
+    .txt {
+
+    }
+    .bouton {
+        color: $color-secondary; /* une fonction pour faire un dégradé de coleur de secondary vers tertiary */
+    }
+}
+.fcnt {
+    width: 100%;
+    li {
+        border-radius: 20px;
+        border: 1px solid grey;
+    }
+
+}
+
+
+
+
+/* FOOTER */
+
 .baspage {
-    background-color: grey;
+    width: 100%;
+    background-color: black;
+    padding-bottom: 30px;
     div {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin-top: 10px;
+        margin-left: 10px;
+        h3 {
+            color: white;
+        }
         .lien {
             text-decoration: none;
-            color: $color-tertiary;
+            color: white;
+            .icone {
+                margin-right: 10px;
+            }
         }
     }
 }

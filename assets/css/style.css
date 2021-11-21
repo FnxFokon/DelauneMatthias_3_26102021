@@ -1,3 +1,8 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
 /*
 Ordre d'importation: 
     outils (variable/fonction/mixin/placeholder)
@@ -27,21 +32,61 @@ ul {
 
 .lien {
   text-decoration: none;
-  color: #99e2d0;
+  color: black;
 }
 
+/* HEADER */
+header {
+  width: 100%;
+}
+header img {
+  align-items: center;
+}
+
+/* Top page */
+.loca {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservation {
+  width: 100%;
+}
+.reservation .bouton {
+  color: #ff79da;
+  /* une fonction pour faire un dégradé de coleur de secondary vers tertiary */
+}
+
+.fcnt {
+  width: 100%;
+}
+.fcnt li {
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+/* FOOTER */
 .baspage {
-  background-color: grey;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 30px;
 }
 .baspage div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  margin-left: 10px;
+}
+.baspage div h3 {
+  color: white;
 }
 .baspage div .lien {
   text-decoration: none;
-  color: #99e2d0;
+  color: white;
+}
+.baspage div .lien .icone {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
