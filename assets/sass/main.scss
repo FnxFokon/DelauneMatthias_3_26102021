@@ -14,18 +14,31 @@ $color-tertiary: #99e2d0;
 $head-font: "Shrikhand", sans-serif;
 $body-font: "Roboto", sans-serif;
 
+/* $box-menu-img: (1,2,3,4); 
+$box-menu: (1,2,3,4);
+
+@mixin box-menu($map) {
+    @each $box in $map {
+        .lien {
+            text-decoration: none;
+            color: black;
+            border-radius: 15px;
+            
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }    
+    }
+}
+*/
+
 /* GENERAL */
 
 body {
     margin: 0;
     font-family: $body-font;
-}
-h1,
-h2,
-h3 {
-    font-family: $head-font;
-    font-weight: normal;
-    font-style: normal;
 }
 ul {
     list-style: none;
@@ -35,6 +48,7 @@ ul {
     text-decoration: none;
     color: black;
 }
+
 /*
 Ordre d'importation: 
     outils (variable/fonction/mixin/placeholder)
@@ -93,18 +107,17 @@ header {
             }
         }
     }
-    .explication{
+    .explication {
         width: 50%;
-            margin-left: auto;
-            margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
         button {
             color: white;
             padding: 15px;
             border: 1px none;
             border-radius: 30px;
-            background: linear-gradient($color-secondary,$color-primary);
+            background: linear-gradient($color-secondary, $color-primary);
         }
-
     }
 }
 
@@ -115,21 +128,71 @@ header {
     .fcnt {
         width: 100%;
         li {
-        width: 90%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        border-radius: 20px;
-        border: 1px solid;
-        margin: auto;
+            width: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 15px;
+            border: 1px solid white;
+            box-shadow: 2px 2px 2px 1px whitesmoke;
+            margin: auto;
+            margin-top: 30px;
         }
     }
 }
-.section3{
-    h2{
+.section3 {
+    background-color: lightgray;
+    h2 {
         margin: 10px;
     }
+    /*.menu {
+        @include box-menu;
+    }*/
 }
+
+/* MENU */
+.rps {
+    background-color: lightgrey;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    div {
+
+    }
+    .repas {
+        
+        ul {
+            list-style: none;
+            li {
+                margin-top: 10px;
+                div {
+                    border: 1px solid white;
+                    background-color: white;
+                    border-radius: 15px;
+                    margin: 0;
+                    font-size: 0.85em;
+                    padding: 10px;
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }   
+    button {
+        color: white;
+        padding: 15px;
+        border: 1px none;
+        border-radius: 30px;
+        background: linear-gradient($color-secondary, $color-primary);
+    }
+}
+
+
+
+
 
 /* FOOTER */
 
