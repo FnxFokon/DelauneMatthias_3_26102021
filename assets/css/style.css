@@ -1,6 +1,25 @@
-@charset "UTF-8";
+/* GENERAL */
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.lien {
+  text-decoration: none;
+  color: black;
 }
 
 /*
@@ -26,44 +45,69 @@ Exemple
         grid-template-columns: 1fr;
     }
 }*/
-ul {
-  list-style: none;
-}
-
-.lien {
-  text-decoration: none;
-  color: black;
-}
-
 /* HEADER */
 header {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header .icone {
+  color: black;
 }
 header img {
-  align-items: center;
+  width: 50%;
 }
 
 /* Top page */
-.loca {
+.section1 .loca {
   width: 100%;
+  border-top: 3px solid lightgray;
+  background-color: #f3f3f3;
+}
+.section1 .loca div {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section1 .loca div .icone {
+  margin-right: 20px;
+}
+.section1 .explication {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section1 .explication button {
+  color: white;
+  padding: 15px;
+  border: 1px none;
+  border-radius: 30px;
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
-.reservation {
+.section2 h2 {
+  margin: 10px;
+}
+.section2 .fcnt {
   width: 100%;
 }
-.reservation .bouton {
-  color: #ff79da;
-  /* une fonction pour faire un dégradé de coleur de secondary vers tertiary */
-}
-
-.fcnt {
-  width: 100%;
-}
-.fcnt li {
+.section2 .fcnt li {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   border-radius: 20px;
-  border: 1px solid grey;
+  border: 1px solid;
+  margin: auto;
+}
+
+.section3 h2 {
+  margin: 10px;
 }
 
 /* FOOTER */
