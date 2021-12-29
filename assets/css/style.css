@@ -23,6 +23,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
 ul {
   list-style: none;
   padding-inline-start: 0;
@@ -73,10 +77,17 @@ header img {
 }
 
 /* Top page */
+.section1 {
+  background-color: #f3f3f3;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+}
 .section1 .loca {
   width: 100%;
   border-top: 3px solid lightgray;
-  background-color: #f3f3f3;
+  background-color: #e6e6e6;
 }
 .section1 .loca div {
   display: flex;
@@ -89,15 +100,16 @@ header img {
   margin-right: 20px;
 }
 .section1 .explication {
-  width: 50%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-.section1 .explication button {
+.section1 button {
+  font-size: 1rem;
   color: white;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
   border: 1px none;
-  border-radius: 30px;
+  border-radius: 40px;
   background: linear-gradient(#ff79da, #9356dc);
 }
 
@@ -106,21 +118,45 @@ header img {
 }
 .section2 .fcnt {
   width: 100%;
+  margin-bottom: 60px;
 }
 .section2 .fcnt li {
   width: 90%;
+  height: 65px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 15px;
-  border: 1px solid white;
+  background-color: #f9f9f9;
   box-shadow: 2px 2px 2px 1px whitesmoke;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  position: relative;
+}
+.section2 .fcnt li span {
+  position: absolute;
+  left: -11px;
+  top: calc(50% - 11px);
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  border: 2px solid #9356dc;
+  background-color: #9356dc;
+  border-radius: 25px;
+}
+.section2 .fcnt li div {
+  color: gray;
+}
+.section2 .fcnt li i:hover {
+  color: #9356dc;
+}
+.section2 .fcnt :hover div {
+  color: #9356dc;
 }
 
 .section3 {
-  background-color: lightgray;
+  background-color: #f3f3f3;
   /*.menu {
       @include box-menu;
   }*/
@@ -128,45 +164,188 @@ header img {
 .section3 h2 {
   margin: 10px;
 }
+.section3 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 300px;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.section3 .menu img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.section3 .menu .txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 15px;
+  padding: 12px;
+}
+.section3 .menu .txt div h3, .section3 .menu .txt div p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.section3 .menu .txt i {
+  padding-right: 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.section3 .menu .txt i.plein {
+  display: none;
+}
+.section3 .menu .txt i:hover.plein {
+  display: initial;
+  color: #9356dc;
+}
+.section3 .menu .txt i:hover.vide {
+  display: none;
+}
 
 /* MENU */
+main {
+  /* background-image:url(/assets/images/restaurants/palette.jpg);
+   background-size: 100%;
+   background-position: top;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+   object-fit: cover;
+   padding-top: 150px;*/
+  margin-top: 0px;
+}
+
 .rps {
-  background-color: lightgrey;
-  padding: 15px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  background-color: #f3f3f3;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
 }
-.rps .repas ul {
-  list-style: none;
+.rps img {
+  width: 105%;
+  height: 300px;
+  object-fit: cover;
+  /**/
 }
-.rps .repas ul li {
-  margin-top: 10px;
-}
-.rps .repas ul li div {
-  border: 1px solid white;
-  background-color: white;
-  border-radius: 15px;
-  margin: 0;
-  font-size: 0.85em;
-  padding: 10px;
-}
-.rps .repas ul li div div {
+.rps .titrerps {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  margin-left: 25px;
+}
+.rps .titrerps h1 {
+  font-size: 1.8rem;
+}
+.rps .titrerps i {
+  margin-right: 35px;
+  font-size: 2rem;
+}
+.rps .repas h2 {
+  margin-left: 25px;
+}
+.rps .repas li {
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.rps .repas li :hover .icone {
+  margin-right: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.rps .repas li :hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+.rps .repas li .box {
+  margin: auto;
+  position: relative;
+}
+.rps .repas li .menu {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 8px;
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+}
+.rps .repas li .descri {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+.rps .repas li .txt {
+  width: 100%;
+  margin-left: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.rps .repas li .txt h3, .rps .repas li .txt p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.rps .repas li .price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  max-width: 100%;
+  margin-left: 0.5rem;
+}
+.rps .repas li .icone {
+  width: 7rem;
+  background: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -7rem;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.rps .repas li .icone > i {
+  color: #99e2d0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: white;
+  transition-duration: 0.5s;
+}
+.rps .repas li .txt > * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
 }
 .rps button {
+  font-size: 1rem;
   color: white;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
   border: 1px none;
-  border-radius: 30px;
+  border-radius: 40px;
   background: linear-gradient(#ff79da, #9356dc);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  margin: auto;
 }
 
 /* FOOTER */
 .baspage {
   width: 100%;
-  background-color: black;
+  background-color: #333333;
   padding-bottom: 30px;
 }
 .baspage div {
@@ -177,6 +356,7 @@ header img {
 }
 .baspage div h3 {
   color: white;
+  font-weight: bolder;
 }
 .baspage div .lien {
   text-decoration: none;

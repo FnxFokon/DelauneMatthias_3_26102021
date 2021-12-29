@@ -28,8 +28,7 @@
     <!-- Liens Police "Roboto" et "Shrikhand"-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shrikhand&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap"
         rel="stylesheet">
 
     <!-- Le lien pour les FA icone -->
@@ -58,17 +57,17 @@
             <h2>Fonctionnement</h2>
             <ul class="fcnt">
                 <li>
-                    <i class="fa-solid fa-1"></i>
+                    <span>1</span>
                     <div class="icone"><i class="fas fa-mobile-alt"></i></div>
                     <p>Choisissez un restaurant</p>
                 </li>
                 <li>
-                    <i class="fa-solid fa-2"></i>
+                    <span>2</span>
                     <div class="icone"><i class="fas fa-list"></i></div>
                     <p>Composez votre menu</p>
                 </li>
                 <li>
-                    <i class="fa-solid fa-3"></i>
+                    <span>3</span>
                     <div class="icone"><i class="fas fa-store"></i></div>
                     <p>Dégustez au restaurant</p>
                 </li>
@@ -76,52 +75,55 @@
         </section>
         <section class="section3">
             <h2>Restaurants</h2>
-            <ul class="menu">
-                <li>
+            <ul>
+                <li class="menu">
                     <a href="menu1.html" class="lien">
-                        <img src="assets/images/restaurants/palette.jpg" width="90%" height="100%"
-                            alt="La palette du goût">
-                        <div>
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                            <div class="icone"><i class="fas fa-heart"></i><i class="far fa-heart"></i></div>
+                        <img src="assets/images/restaurants/palette.jpg" alt="La palette du goût">
+
+                        <div class="txt">
+                            <div>
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="fas fa-heart plein"></i><i class="far fa-heart vide"></i>
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a href="menu2.html" class="lien">
-                        <img src="assets/images/restaurants/enchante.jpg" width="90%" height="100%"
-                            alt="La note enchantée">
+                <li class="menu">
+                    <a href="menu1.html" class="lien">
+                        <img src="assets/images/restaurants/enchante.jpg" alt="La note enchantée">
+                    </a>
+                    <div class="txt">
                         <div>
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
-                            <div class="icone"><i class="fas fa-heart"></i><i class="far fa-heart"></i></div>
                         </div>
-                    </a>
+                        <i class="fas fa-heart plein"></i><i class="far fa-heart vide"></i>
+                    </div>
                 </li>
-                <li>
-                    <a href="menu3.html" class="lien">
-                        <img src="assets/images/restaurants/francais.jpg" width="90%" height="100%"
-                            alt="A la française">
+                <li class="menu">
+                    <a href="menu1.html" class="lien">
+                        <img src="assets/images/restaurants/francais.jpg" alt="À la française">
+                    </a>
+                    <div class="txt">
                         <div>
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
-                            <div class="icone"><i class="fas fa-heart"></i><i class="far fa-heart"></i></div>
                         </div>
-                    </a>
+                        <i class="fas fa-heart plein"></i><i class="far fa-heart vide"></i>
+                    </div>
                 </li>
-                <li>
-                    <a href="menu4.html" class="lien">
-                        <img src="assets/images/restaurants/delice.jpg" width="90%" height="100%"
-                            alt="les délices des sens">
-                        <div>
-                            <div>
-                                <h3>Le délices des sens</h3>
-                                <p>Folie-Mélicourt</p>
-                            </div>
-                            <div class="icone"><i class="fas fa-heart"></i><i class="far fa-heart"></i></div>
-                        </div>
+                <li class="menu">
+                    <a href="menu1.html" class="lien">
+                        <img src="assets/images/restaurants/delice.jpg" alt="Le délice des sens">
                     </a>
+                    <div class="txt">
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <i class="fas fa-heart plein"></i><i class="far fa-heart vide"></i>
+                    </div>
                 </li>
             </ul>
         </section>
