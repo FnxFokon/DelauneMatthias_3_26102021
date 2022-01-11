@@ -30,6 +30,7 @@ h1 {
 ul {
   list-style: none;
   padding-inline-start: 0;
+  margin: 0;
 }
 
 .lien {
@@ -64,16 +65,22 @@ Exemple
 header {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  position: relative;
 }
 header .icone {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 25px;
   color: black;
+  font-size: 1.2em;
 }
 header img {
   width: 50%;
+  font-size: 0.6em;
 }
 
 /* Top page */
@@ -91,10 +98,8 @@ header img {
 }
 .section1 .loca div {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
 }
 .section1 .loca div .icone {
   margin-right: 20px;
@@ -107,31 +112,32 @@ header img {
 .section1 button {
   font-size: 1rem;
   color: white;
-  padding: 15px 15px 15px 15px;
+  padding: 15px 25px 15px 25px;
   border: 1px none;
   border-radius: 40px;
   background: linear-gradient(#ff79da, #9356dc);
 }
 
 .section2 h2 {
-  margin: 10px;
+  margin: 20px;
+  margin-top: 40px;
 }
 .section2 .fcnt {
   width: 100%;
   margin-bottom: 60px;
 }
 .section2 .fcnt li {
-  width: 90%;
+  width: 85%;
   height: 65px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
   align-items: center;
   border-radius: 15px;
   background-color: #f9f9f9;
   box-shadow: 2px 2px 2px 1px whitesmoke;
   margin: auto;
   margin-top: 20px;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   position: relative;
 }
 .section2 .fcnt li span {
@@ -147,6 +153,14 @@ header img {
 }
 .section2 .fcnt li div {
   color: gray;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+.section2 .fcnt li div .tel {
+  font-size: 1.2em;
+}
+.section2 .fcnt li p {
+  font-weight: bold;
 }
 .section2 .fcnt li i:hover {
   color: #9356dc;
@@ -162,79 +176,100 @@ header img {
   }*/
 }
 .section3 h2 {
+  padding: 10px;
+  padding-top: 40px;
   margin: 10px;
+  font-size: 1.3em;
 }
 .section3 .menu {
+  width: 90%;
+  height: 264px;
+  border-radius: 20px;
+  margin: auto;
+  position: relative;
+  padding-bottom: 25px;
+}
+.section3 .menu .lien {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
-  height: 300px;
-  border-radius: 20px;
-  margin: auto;
-  margin-bottom: 15px;
-}
-.section3 .menu img {
   width: 100%;
-  height: 200px;
+  height: 264px;
+}
+.section3 .menu .lien img {
+  width: 100%;
+  height: calc(100% - 64px);
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.section3 .menu .txt {
+.section3 .menu .lien .btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 2px solid #99e2d0;
+  background-color: #99e2d0;
+  color: #2c9c81;
+  font-weight: bold;
+  padding: 3px 6px 3px 6px;
+}
+.section3 .menu .lien .txt {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  height: 50px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-bottom: 15px;
+  height: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   padding: 12px;
 }
-.section3 .menu .txt div h3, .section3 .menu .txt div p {
+.section3 .menu .lien .txt div h3,
+.section3 .menu .lien .txt div p {
+  font-size: 0.9em;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.section3 .menu .txt i {
+.section3 .menu .lien .txt .coeur {
   padding-right: 20px;
-  font-size: 2em;
+  font-size: 1.5em;
   cursor: pointer;
 }
-.section3 .menu .txt i.plein {
+.section3 .menu .lien .txt .coeur .plein {
   display: none;
 }
-.section3 .menu .txt i:hover.plein {
+.section3 .menu .lien .txt .coeur:hover .plein {
   display: initial;
   color: #9356dc;
 }
-.section3 .menu .txt i:hover.vide {
+.section3 .menu .lien .txt .coeur:hover .vide {
   display: none;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
 /* MENU */
 main {
-  /* background-image:url(/assets/images/restaurants/palette.jpg);
-   background-size: 100%;
-   background-position: top;
-   background-attachment: fixed;
-   background-repeat:no-repeat;
-   object-fit: cover;
-   padding-top: 150px;*/
   margin-top: 0px;
+  background-color: #f3f3f3;
+}
+main img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .rps {
   background-color: #f3f3f3;
-  border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  overflow: hidden;
-}
-.rps img {
-  width: 105%;
-  height: 300px;
-  object-fit: cover;
-  /**/
+  border-top-left-radius: 25px;
 }
 .rps .titrerps {
   display: flex;
@@ -248,10 +283,18 @@ main {
 }
 .rps .titrerps i {
   margin-right: 35px;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .rps .repas h2 {
   margin-left: 25px;
+  padding-bottom: 5px;
+}
+.rps .repas h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #99e2d0;
 }
 .rps .repas li {
   width: 90%;
@@ -259,6 +302,8 @@ main {
   margin: auto;
   border-radius: 15px;
   margin-bottom: 20px;
+  animation-duration: 3s;
+  animation-name: slide;
 }
 .rps .repas li :hover .icone {
   margin-right: 0;
@@ -293,7 +338,8 @@ main {
   padding-top: 5px;
   padding-bottom: 10px;
 }
-.rps .repas li .txt h3, .rps .repas li .txt p {
+.rps .repas li .txt h3,
+.rps .repas li .txt p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -328,7 +374,10 @@ main {
   overflow: hidden;
   max-width: 100%;
 }
-.rps button {
+.rps .butt {
+  padding-bottom: 70px;
+}
+.rps .butt button {
   font-size: 1rem;
   color: white;
   padding: 15px 15px 15px 15px;
@@ -340,6 +389,7 @@ main {
   justify-content: space-around;
   width: 45%;
   margin: auto;
+  margin-top: 50px;
 }
 
 /* FOOTER */
@@ -351,8 +401,8 @@ main {
 .baspage div {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 .baspage div h3 {
   color: white;
