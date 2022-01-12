@@ -286,14 +286,14 @@ header {
 }
 @keyframes slide {
     0% {
-      transform: translateY(100%);
-      opacity: 0;
+        transform: translateY(100%);
+        opacity: 0;
     }
     100% {
-      transform: translateY(0);
-      opacity: 100;
+        transform: translateY(0);
+        opacity: 100;
     }
-  }
+}
 /* MENU */
 main {
     margin-top: 0px;
@@ -327,7 +327,7 @@ main {
     .repas {
         h2 {
             margin-left: 25px;
-            padding-bottom: 5px;
+            padding-top: 30px;
             &::after {
                 content: "";
                 display: block;
