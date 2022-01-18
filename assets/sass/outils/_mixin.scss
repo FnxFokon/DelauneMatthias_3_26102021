@@ -1,0 +1,46 @@
+@keyframes slide {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@mixin mini-tablette {
+    @media screen and (min-width:map-get($breakpoints,mini-tablette)) {
+        @content;
+    }
+}
+
+@mixin tablette {
+    @media screen and (min-width:map-get($breakpoints,tablette)) {
+        @content;
+    }
+}
+
+@mixin ordi-portable {
+    @media screen and (min-width:map-get($breakpoints,ordi-portable)) {
+        @content;
+    }
+}
+
+@mixin ordi-portable2 {
+    @media screen and (max-width:map-get($breakpoints,ordi-portable)) {
+        @content;
+    }
+}
+
+@mixin g-ordi-portable {
+    @media screen and (min-width:map-get($breakpoints,g-ordi-portable)) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width:map-get($breakpoints,pc)) {
+        @content;
+    }
+}

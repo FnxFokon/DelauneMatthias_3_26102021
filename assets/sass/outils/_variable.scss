@@ -1,11 +1,9 @@
 $breakpoints: (
-    mobile-mini: 375px,
-    mobile: 425px,
-    tablette: 768px,
-    Ordi-portable: 1024px,
-    G-Ordi-portable: 1200px,
-    PC-petit-écran: 1400px,
-    PC: 1600px,
+    mini-tablette: 426px,
+    tablette: 590px,
+    ordi-portable: 769px,
+    g-ordi-portable: 1050px,
+    pc: 1350px,
 );
 
 $color-primary: #9356dc;

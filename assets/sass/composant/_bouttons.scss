@@ -1,0 +1,28 @@
+.butt {
+    padding-bottom: 70px;
+    .btn {
+        padding: 20px 25px 20px 25px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+        margin: auto;
+        margin-top: 45px;
+        @include ordi-portable2 {
+            padding: 15px 15px 15px 15px;
+            width: 40%;
+        }
+    }
+}
+.bout {
+    font-size: 1rem;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    border: 1px none;
+    border-radius: 40px;
+    margin-top: 35px;
+    background: linear-gradient($color-secondary, $color-primary);
+    @include ordi-portable {
+        margin-top: 45px;
+    }
+}

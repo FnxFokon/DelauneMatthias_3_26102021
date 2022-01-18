@@ -1,18 +1,46 @@
+main {
+    @include ordi-portable {
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        @include ordi-portable {
+            border-top: 3px solid lightgray;
+        }
+        @include pc {
+            justify-content: space-evenly;
+        }
+    }
+}
 .section1 {
     background-color: $gris1;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 40px;
+    @include ordi-portable {
+        margin: 0;
+        width: 45%;
+        margin-left: 5%;
+        background-color: $gris1;
+    }
     .loca {
         width: 100%;
         border-top: 3px solid lightgray;
         background-color: $gris2;
+        @include ordi-portable {
+            background-color: $gris1;
+            border-top: unset;
+        }
         div {
             display: flex;
             justify-content: center;
             align-items: center;
-
+            @include tablette {
+                max-width: 60%;
+                margin: auto;
+            }
             .icone {
                 margin-right: 20px;
             }
@@ -22,25 +50,37 @@
         width: 80%;
         margin-left: auto;
         margin-right: auto;
-    }
-    button {
-        font-size: 1rem;
-        color: white;
-        padding: 15px 25px 15px 25px;
-        border: 1px none;
-        border-radius: 40px;
-        background: linear-gradient($color-secondary, $color-primary);
+
+        h1,p {
+            @include ordi-portable {
+                margin-bottom: 25px;
+            }
+        }
     }
 }
-
 .section2 {
+    @include tablette {
+        margin: auto;
+        max-width: 500px;
+    }
+    @include ordi-portable {
+        margin: 0;
+        width: 50%;
+    }
     h2 {
-        margin: 20px;
-        margin-top: 40px;
+        padding: 15px 0px 15px 0px;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        @include ordi-portable {
+            margin-top: 0px;
+            
+        }
     }
     .fcnt {
         width: 100%;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         li {
             width: 85%;
             height: 65px;
@@ -54,6 +94,17 @@
             margin-top: 20px;
             font-size: 0.9em;
             position: relative;
+            @include tablette {
+                max-width: 380px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            @include ordi-portable {
+                width: 90%;
+                max-width: unset;
+                margin: auto;
+                margin-top: 20px;
+            }
             span {
                 position: absolute;
                 left: -11px;
@@ -87,81 +138,99 @@
         }
     }
 }
+
 .section3 {
     background-color: $gris1;
+    width: 100%;
     h2 {
-        padding: 10px;
-        padding-top: 40px;
-        margin: 10px;
-        font-size: 1.3em;
-    }
-    .menu {
         width: 90%;
-        height: 264px;
-        border-radius: 20px;
         margin: auto;
-        position: relative;
-        padding-bottom: 25px;
-        .lien {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 1.3em;
+        @include  tablette {
+            width: 95%;
+        }
+    }
+    ul {
+        @include tablette {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
+            justify-items: center;
+            flex-wrap: wrap;
             width: 100%;
+            margin: auto;
+        }
+        .menu {
+            width: 90%;
             height: 264px;
-            img {
-                width: 100%;
-                height: calc(100% - 64px);
-                object-fit: cover;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
+            border-radius: 20px;
+            margin: auto;
+            position: relative;
+            padding-bottom: 25px;
+            @include tablette {
+                width: 45%;
+                margin: auto;
             }
-            .btn {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                border: 2px solid $color-tertiary;
-                background-color: $color-tertiary;
-                color: darken($color: $color-tertiary, $amount: 35%);
-                font-weight: bold;
-                padding: 3px 6px 3px 6px;
-            }
-            .txt {
+            .lien {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: white;
-                height: 40px;
-                border-bottom-left-radius: 10px;
-                border-bottom-right-radius: 10px;
-                padding: 12px;
-                div {
-                    h3,
-                    p {
-                        font-size: 0.9em;
-                        margin-top: 5px;
-                        margin-bottom: 5px;
-                    }
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 264px;
+                img {
+                    width: 100%;
+                    height: calc(100% - 64px);
+                    object-fit: cover;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
                 }
-                .coeur {
-                    padding-right: 20px;
-                    font-size: 1.5em;
-                    
-                    cursor: pointer;
-                    .plein {
-                        display: none;
-                    }
-                    &:hover {
-                        
-                        .plein {
-                            display: initial;
-                            background-clip: text;
-                            -webkit-background-clip: text;
-                            color: transparent;
-                            background: linear-gradient($color-primary, $color-secondary);
-                            
+                .btn {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    border: 2px solid $color-tertiary;
+                    background-color: $color-tertiary;
+                    color: darken($color: $color-tertiary, $amount: 35%);
+                    font-weight: bold;
+                    padding: 3px 6px 3px 6px;
+                }
+                .txt {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: white;
+                    height: 40px;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    padding: 12px;
+                    div {
+                        h3,
+                        p {
+                            font-size: 0.9em;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
                         }
-                        .vide {
+                    }
+                    .coeur {
+                        padding-right: 20px;
+                        font-size: 1.5em;
+
+                        cursor: pointer;
+                        .plein {
                             display: none;
+                        }
+                        &:hover {
+                            .plein {
+                                display: initial;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                color: transparent;
+                                background: linear-gradient($color-primary, $color-secondary);
+                            }
+                            .vide {
+                                display: none;
+                            }
                         }
                     }
                 }

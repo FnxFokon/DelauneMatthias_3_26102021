@@ -2,11 +2,16 @@
     width: 100%;
     background-color: lighten($color: #000000, $amount: 20%);
     padding-bottom: 30px;
+    
     div {
         display: flex;
         align-items: center;
         padding-top: 10px;
-        padding-left: 10px;
+        width: 90%;
+        margin: auto;
+        @include tablette {
+            width: 95%;
+        }
         h3 {
             color: white;
 
