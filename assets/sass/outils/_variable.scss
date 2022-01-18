@@ -1,0 +1,25 @@
+$breakpoints: (
+    mobile-mini: 375px,
+    mobile: 425px,
+    tablette: 768px,
+    Ordi-portable: 1024px,
+    G-Ordi-portable: 1200px,
+    PC-petit-écran: 1400px,
+    PC: 1600px,
+);
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$gris1: lighten(
+    $color: gray,
+    $amount: 45%,
+);
+$gris2: lighten(
+    $color: gray,
+    $amount: 40%,
+);
+$gris3: lighten(
+    $color: lightgray,
+    $amount: 15%,
+);

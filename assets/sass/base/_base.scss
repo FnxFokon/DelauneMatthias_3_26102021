@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    font-family: $body-font;
+}
+h1 {
+    font-family: $head-font;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+}
+.lien {
+    text-decoration: none;
+    color: black;
+}

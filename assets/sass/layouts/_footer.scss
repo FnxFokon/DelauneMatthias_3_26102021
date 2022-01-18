@@ -1,0 +1,23 @@
+.baspage {
+    width: 100%;
+    background-color: lighten($color: #000000, $amount: 20%);
+    padding-bottom: 30px;
+    div {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 10px;
+        h3 {
+            color: white;
+
+            font-weight: bolder;
+        }
+        .lien {
+            text-decoration: none;
+            color: white;
+            .icone {
+                margin-right: 10px;
+            }
+        }
+    }
+}

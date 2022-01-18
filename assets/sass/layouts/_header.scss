@@ -1,0 +1,20 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    .icone {
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 25px;
+        color: black;
+        font-size: 1.2em;
+    }
+    img {
+        width: 50%;
+        font-size: 0.6em;
+    }
+}
