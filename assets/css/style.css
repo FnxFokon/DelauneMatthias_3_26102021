@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* hsl(267, 66%, 60%)*/
+/* hsl (317°, 100%, 74%)*/
 @keyframes slide {
   0% {
     transform: translateY(100%);
@@ -8,12 +11,38 @@
     opacity: 100;
   }
 }
-@keyframes coeur {
-  from {
-    background-color: none;
+@-webkit-keyframes load {
+  0% {
+    opacity: 100;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  to {
-    background-color: linear-gradient(#9356dc, #ff79da);
+  99% {
+    opacity: 0, 1;
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 100;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    opacity: 0, 1;
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 body {
@@ -21,7 +50,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
+h1, .logo {
   font-family: "Shrikhand", cursive, sans-serif;
 }
 
@@ -63,11 +92,16 @@ ul {
   border-radius: 40px;
   margin-top: 35px;
   background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 1px 1px 1px 1px white;
 }
 @media screen and (min-width: 769px) {
   .bout {
     margin-top: 45px;
   }
+}
+.bout:hover {
+  background: linear-gradient(#ff94e1, #a06be1);
+  box-shadow: 1px 1px 1px 1px #d7c0f2;
 }
 
 header {
@@ -136,15 +170,58 @@ header img {
     width: 100%;
   }
 }
-@media screen and (min-width: 769px) and (min-width: 769px) {
+@media screen and (min-width: 769px) {
   main {
     border-top: 3px solid lightgray;
   }
 }
-@media screen and (min-width: 769px) and (min-width: 1350px) {
+@media screen and (min-width: 1350px) {
   main {
     justify-content: space-evenly;
   }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  font-size: 10px;
+  margin: auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #ff79da;
+  background: -webkit-linear-gradient(left, #ff79da 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ff79da 10%, rgba(255, 255, 255, 0) 42%);
+  -webkit-animation: load 3s;
+  animation: load 3s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  opacity: 0;
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ff79da;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loader:after {
+  background: #9356dc;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .section1 {
@@ -372,10 +449,6 @@ header img {
 }
 .section3 ul .menu .lien .txt .coeur .plein {
   display: none;
-}
-.section3 ul .menu .lien .txt .coeur:hover {
-  animation-duration: 2s;
-  animation-name: coeur;
 }
 .section3 ul .menu .lien .txt .coeur:hover .plein {
   display: initial;

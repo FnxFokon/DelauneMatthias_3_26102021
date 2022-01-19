@@ -6,9 +6,16 @@ $breakpoints: (
     pc: 1350px,
 );
 
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
+$color-primary: #9356dc; /* hsl(267, 66%, 60%)*/
+$color-primary2: hsl(267, 66%, 65%);
+$color-secondary: #ff79da; /* hsl (317°, 100%, 74%)*/
+$color-secondary2: hsl(317, 100%, 79%);
 $color-tertiary: #99e2d0;
+$color-btn: linear-gradient($color-secondary, $color-primary);
+$gris: lighten(
+    $color: $color-primary,
+    $amount: 25%,
+);
 $gris1: lighten(
     $color: gray,
     $amount: 45%,
@@ -17,6 +24,7 @@ $gris2: lighten(
     $color: gray,
     $amount: 40%,
 );
+
 $gris3: lighten(
     $color: lightgray,
     $amount: 15%,

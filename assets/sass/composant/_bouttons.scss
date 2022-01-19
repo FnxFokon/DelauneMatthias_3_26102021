@@ -22,7 +22,12 @@
     border-radius: 40px;
     margin-top: 35px;
     background: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 1px 1px 1px 1px white;
     @include ordi-portable {
         margin-top: 45px;
+    }
+    &:hover {
+        background: linear-gradient($color-secondary2, $color-primary2);
+        box-shadow: 1px 1px 1px 1px $gris;
     }
 }
