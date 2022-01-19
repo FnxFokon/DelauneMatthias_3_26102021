@@ -28,24 +28,37 @@ main {
         width: 90%;
         margin: auto;
         @include tablette {
-            width: 60%;
-            margin: auto;
+            width: 70%;
         }
         @include ordi-portable {
+            width: 55%;
+        }
+        @include g-ordi-portable {
             width: 40%;
-            margin: auto;
-            
+        }
+        @include pc {
+            width: 30%;
         }
         h1 {
             font-size: 1.8rem;
         }
         i {
-            margin-right: 35px;
+            margin-left: 20px;
+            margin-right: 20px;
             font-size: 1.8rem;
         }
     }
     .repas {
         width: 100%;
+        &:nth-of-type(2) ul {
+            animation-delay: 0s;
+        }
+        &:nth-of-type(3) ul {
+            animation-delay: 2s;
+        }
+        &:nth-of-type(4) ul {
+            animation-delay: 4s;
+        }
         h2 {
             width: 90%;
             margin: auto;
@@ -60,6 +73,8 @@ main {
             }
         }
         ul {
+            animation-duration: 2s;
+            animation-name: slide;
             @include ordi-portable {
                 display: flex;
                 justify-content: space-between;
@@ -73,13 +88,7 @@ main {
                 margin: auto;
                 border-radius: 15px;
                 margin-bottom: 20px;
-                @for $box from 1 to 10 {
-                    &:nth-of-type(#{$box}) {
-                        animation-delay: 100ms * $box;
-                    }
-                }
-                animation-duration: 2s;
-                animation-name: slide;
+
                 @include ordi-portable {
                     width: 45%;
                     margin: auto;

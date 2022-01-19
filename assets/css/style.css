@@ -82,6 +82,13 @@ header img {
   width: 50%;
   font-size: 0.6em;
 }
+@media screen and (min-width: 590px) {
+  header img {
+    width: 40%;
+    max-width: 500px;
+    margin: auto;
+  }
+}
 
 .baspage {
   width: 100%;
@@ -178,7 +185,8 @@ header img {
   margin-right: auto;
 }
 @media screen and (min-width: 769px) {
-  .section1 .explication h1, .section1 .explication p {
+  .section1 .explication h1,
+.section1 .explication p {
     margin-bottom: 25px;
   }
 }
@@ -359,10 +367,10 @@ header img {
 }
 .section3 ul .menu .lien .txt .coeur:hover .plein {
   display: initial;
-  background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .section3 ul .menu .lien .txt .coeur:hover .vide {
   display: none;
@@ -404,25 +412,43 @@ main img {
 }
 @media screen and (min-width: 590px) {
   .rps .titrerps {
-    width: 60%;
-    margin: auto;
+    width: 70%;
   }
 }
 @media screen and (min-width: 769px) {
   .rps .titrerps {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .rps .titrerps {
     width: 40%;
-    margin: auto;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .rps .titrerps {
+    width: 30%;
   }
 }
 .rps .titrerps h1 {
   font-size: 1.8rem;
 }
 .rps .titrerps i {
-  margin-right: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 1.8rem;
 }
 .rps .repas {
   width: 100%;
+}
+.rps .repas:nth-of-type(2) ul {
+  animation-delay: 0s;
+}
+.rps .repas:nth-of-type(3) ul {
+  animation-delay: 2s;
+}
+.rps .repas:nth-of-type(4) ul {
+  animation-delay: 4s;
 }
 .rps .repas h2 {
   width: 90%;
@@ -436,6 +462,10 @@ main img {
   width: 60px;
   height: 3px;
   background-color: #99e2d0;
+}
+.rps .repas ul {
+  animation-duration: 2s;
+  animation-name: slide;
 }
 @media screen and (min-width: 769px) {
   .rps .repas ul {
@@ -452,35 +482,6 @@ main img {
   margin: auto;
   border-radius: 15px;
   margin-bottom: 20px;
-  animation-duration: 2s;
-  animation-name: slide;
-}
-.rps .repas ul li:nth-of-type(1) {
-  animation-delay: 100ms;
-}
-.rps .repas ul li:nth-of-type(2) {
-  animation-delay: 200ms;
-}
-.rps .repas ul li:nth-of-type(3) {
-  animation-delay: 300ms;
-}
-.rps .repas ul li:nth-of-type(4) {
-  animation-delay: 400ms;
-}
-.rps .repas ul li:nth-of-type(5) {
-  animation-delay: 500ms;
-}
-.rps .repas ul li:nth-of-type(6) {
-  animation-delay: 600ms;
-}
-.rps .repas ul li:nth-of-type(7) {
-  animation-delay: 700ms;
-}
-.rps .repas ul li:nth-of-type(8) {
-  animation-delay: 800ms;
-}
-.rps .repas ul li:nth-of-type(9) {
-  animation-delay: 900ms;
 }
 @media screen and (min-width: 769px) {
   .rps .repas ul li {
@@ -563,19 +564,5 @@ main img {
   overflow: hidden;
   max-width: 100%;
 }
-
-/*
-@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
-        @content;
-    }
-}
-.fcnt {
-    border: 2px solid red;
-    grid-template-columns: repeat(3, 1fr);
-    @include mobile-only() {
-        grid-template-columns: 1fr;
-    }
-}*/
 
 /*# sourceMappingURL=style.css.map */

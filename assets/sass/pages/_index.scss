@@ -51,7 +51,8 @@ main {
         margin-left: auto;
         margin-right: auto;
 
-        h1,p {
+        h1,
+        p {
             @include ordi-portable {
                 margin-bottom: 25px;
             }
@@ -75,7 +76,6 @@ main {
         margin-bottom: 30px;
         @include ordi-portable {
             margin-top: 0px;
-            
         }
     }
     .fcnt {
@@ -148,7 +148,7 @@ main {
         margin-top: 30px;
         margin-bottom: 30px;
         font-size: 1.3em;
-        @include  tablette {
+        @include tablette {
             width: 95%;
         }
     }
@@ -218,15 +218,15 @@ main {
 
                         cursor: pointer;
                         .plein {
-                            display: none;
+                            display: none;   
                         }
                         &:hover {
                             .plein {
                                 display: initial;
-                                background-clip: text;
-                                -webkit-background-clip: text;
                                 color: transparent;
                                 background: linear-gradient($color-primary, $color-secondary);
+                                -webkit-background-clip: text;
+                                background-clip: text;
                             }
                             .vide {
                                 display: none;

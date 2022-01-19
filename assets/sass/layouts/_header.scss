@@ -16,5 +16,10 @@ header {
     img {
         width: 50%;
         font-size: 0.6em;
+        @include tablette {
+            width: 40%;
+            max-width: 500px;
+            margin: auto;
+        }
     }
 }
