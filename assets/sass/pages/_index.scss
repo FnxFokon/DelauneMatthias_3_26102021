@@ -218,9 +218,11 @@ main {
 
                         cursor: pointer;
                         .plein {
-                            display: none;   
+                            display: none;
                         }
                         &:hover {
+                            animation-duration: 2s;
+                            animation-name: coeur;
                             .plein {
                                 display: initial;
                                 color: transparent;

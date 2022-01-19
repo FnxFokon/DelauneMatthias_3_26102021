@@ -9,38 +9,47 @@
     }
 }
 
+@keyframes coeur {
+    from {
+        background-color: none;
+    }
+    to {
+        background-color: linear-gradient($color-primary, $color-secondary);
+    }
+}
+
 @mixin mini-tablette {
-    @media screen and (min-width:map-get($breakpoints,mini-tablette)) {
+    @media screen and (min-width: map-get($breakpoints,mini-tablette)) {
         @content;
     }
 }
 
 @mixin tablette {
-    @media screen and (min-width:map-get($breakpoints,tablette)) {
+    @media screen and (min-width: map-get($breakpoints,tablette)) {
         @content;
     }
 }
 
 @mixin ordi-portable {
-    @media screen and (min-width:map-get($breakpoints,ordi-portable)) {
+    @media screen and (min-width: map-get($breakpoints,ordi-portable)) {
         @content;
     }
 }
 
 @mixin ordi-portable2 {
-    @media screen and (max-width:map-get($breakpoints,ordi-portable)) {
+    @media screen and (max-width: map-get($breakpoints,ordi-portable)) {
         @content;
     }
 }
 
 @mixin g-ordi-portable {
-    @media screen and (min-width:map-get($breakpoints,g-ordi-portable)) {
+    @media screen and (min-width: map-get($breakpoints,g-ordi-portable)) {
         @content;
     }
 }
 
 @mixin pc {
-    @media screen and (min-width:map-get($breakpoints,pc)) {
+    @media screen and (min-width: map-get($breakpoints,pc)) {
         @content;
     }
 }

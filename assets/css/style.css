@@ -8,13 +8,21 @@
     opacity: 100;
   }
 }
+@keyframes coeur {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: linear-gradient(#9356dc, #ff79da);
+  }
+}
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
 h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", cursive, sans-serif;
 }
 
 ul {
@@ -364,6 +372,10 @@ header img {
 }
 .section3 ul .menu .lien .txt .coeur .plein {
   display: none;
+}
+.section3 ul .menu .lien .txt .coeur:hover {
+  animation-duration: 2s;
+  animation-name: coeur;
 }
 .section3 ul .menu .lien .txt .coeur:hover .plein {
   display: initial;
