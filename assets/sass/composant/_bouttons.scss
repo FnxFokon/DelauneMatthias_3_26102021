@@ -31,3 +31,24 @@
         box-shadow: 1px 1px 1px 1px $gris;
     }
 }
+.coeur {
+    padding-right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    .plein {
+        display: none;
+    }
+    &:hover {
+        .plein {
+            display: initial;
+            color: transparent;
+            background: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        .vide {
+            display: none;
+        }
+    }
+}
