@@ -11,7 +11,7 @@
     opacity: 100;
   }
 }
-@keyframes loader {
+@keyframes loading {
   0% {
     opacity: 1;
   }
@@ -202,7 +202,7 @@ header img {
 }
 
 .loading {
-  animation: loader 3s forwards;
+  animation: loading 3s forwards;
   width: 100%;
   height: 100vh;
   position: fixed;
