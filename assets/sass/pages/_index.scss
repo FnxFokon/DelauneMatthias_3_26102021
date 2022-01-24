@@ -13,8 +13,8 @@ main {
         justify-content: space-evenly;
     }
 }
-
 .loader {
+    z-index: 999;
     position: absolute;
     top: 50%;
     right: 50%;
