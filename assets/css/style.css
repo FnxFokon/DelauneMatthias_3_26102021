@@ -13,9 +13,11 @@
 }
 @keyframes loading {
   0% {
+    display: initial;
     opacity: 1;
   }
   90% {
+    display: initial;
     opacity: 1;
   }
   100% {
@@ -210,6 +212,7 @@ header img {
   right: 0;
   background-color: white;
   z-index: 999999;
+  display: none;
 }
 .loading .loader {
   position: absolute;
