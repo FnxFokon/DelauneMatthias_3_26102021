@@ -11,16 +11,17 @@
 
 @keyframes loading {
     0% {
-        display: initial;
+        
         opacity: 1;
       }
 
       90% {
-        display: initial;
+       
         opacity: 1;
       }
 
     100% {
+        z-index: -1;
         opacity: 0;
       }
   }
